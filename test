@@ -1,0 +1,36 @@
+Esercizio 0 (“Se copiate, vi cacciamo”)
+Rendete la vostra directory home inaccessibile ad altri utenti (sia in lettura che in esecuzione). Si puo’
+tenere una sola directory in /public che abbia come nome il vostro username e.g.
+“/public/giovanni.rossi” e che abbia permessi 700.
+Non usare system o popen o simili! Non fare exec di “sh -c”. (per python usare subprocess e non
+os.system, os.spawn).
+Esercizio 1: Linguaggio C (obbligatorio) 20 punti
+Fare un programma di copia parallelo di file.
+pcp file1 file2
+pcp deve creare due processi figli; mentre un processo copia la prima meta’ del file, l'altro deve
+copiare l’altra meta’.
+Esercizio 2: Linguaggio C: 10 punti
+usando “getopt” consentire di scegliere il grado di parallelismo voluto:
+ pcp -j 8 file1 file2
+deve creare 8 processi, ogni processo copia 1/8 del file.
+Esercizio 3: Python o bash: 10 punti
+Sia data una directory che contiene file di testo.
+Scopo dell'esercizio e' di scrivere un programma Python o uno script bash chiamato ccpl che conti i
+caratteri delle corrispondenti righe di testo di tutti i file della directory, si vuole cioe' sapere il numero
+totale di caratteri presenti nelle prime righe di tutti i file, nelle seconde linee, ecc.
+$ ccpl mydir
+1 234
+2 21
+3 333
+…..
+l'ouput significa che se contiamo tutti i caratteri contenuti nella prima riga di tutti i file in mydir
+otteniamo 234 (mydir/file1 puo' avere 40 caratteri nella prima riga, mydir/file2 ne puo' avere 20, ecc...
+procedendo per tutti i file di mydir la somma fa 234).
+Esercizio 4: (“Consegnate! E’ ora!”):
+Consegnare lo script e il sorgente dei programma C, in attachment separati, entro il tempo a
+disposizione, via e-mail a: renzo chiocciola cs.unibo.it. Il subject del mail deve essere uguale a
+PROVAPRATICA, i nomi dei file in attachment devono contenere il vostro cognome (per evitare
+confusioni in fase di correzione).
+INOLTRE:
+Se volete che il vostro lavoro venga giudicato, lasciate aperta la vostra sessione (incluso il vostro editor)
+e lasciate il laboratorio. Verrete richiamati uno alla volta per una breve discussione sul vostro elaborato.
